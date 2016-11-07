@@ -1,124 +1,169 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Andrerodrigues | Um pouco sobre web responsive</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Andrerodrigues</h1>
-      <h2 class="project-tagline"></h2>
-      <a href="https://github.com/AndrezinRodrigue/AndreRodrigues" class="btn">Veja meu GitHub</a>
-      <a href="https://github.com/AndrezinRodrigue/AndreRodrigues/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/AndrezinRodrigue/AndreRodrigues/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="André Rodrigues">
+        <meta name="description" content="André Rodrigues Dev Front-End">
+        <meta name="news_keywords" content="Web Design Responsive, Web responsive, responsividade">
+        <title>André Rodrigues</title>
+        <!--css-->
+        <link href="css/estilo.css" rel="stylesheet" >
+        <link  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <!--fontes-->
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet"><!--/Icones-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet"><!--/H1 Sections-->
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"><!--P SECTIONS-->
+    </head>    
+    <body>
+        <header>
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-lg-12">
+                        <h1>ANDRÉ RODRIGUES</h1>
+                        <p><i class="fa fa-mobile fa-5x"></i> UM POUCO SOBRE WEB REPONSIVE</p>
+                    </div>
+                </div>
+            </div>
+        </header><!--/header-->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="text-center">UM POUCO SOBRE WEB RESPONSIVE</h1>
+                        <img src="http://www.crestinfotech.com/wp-content/uploads/2016/01/Responsive-web-design.png" class="img-responsive">
+                        <p>
+                            Hoje não é segredo pra ninguém que boa parte dos usuários tem acesso por (laptops, tablets, netbooks, celulares, desktops com tela pequena, iMacs com telas gigantescas, segundo monitor etc.), ou seja, a internet já não tem possui barreiras em comunicação. Bom vamos ao foco do assunto sabemos que boa parte dos usuários hoje tem desde computadores tem em suas casas desde computadores de mesa até mesmo o celular e pensando nisso que vou falar sobre um assunto polêmico hoje na internet a (web-responsive). Antes de começarmos a mostrar as técnicas de medidas adequadas é importante entendermos como surgiu a web responsive.<br>
 
-    <section class="main-content">
-      <p>Web Responsive e CSS Elegant </p>
+ A Web responsive é uma técnica que surgiu com a ideia de solucionar o problema na questão acessibilidade, mas por onde começar a aplicar essa técnica? Devemos pensar em um layout que seja (acessível) a qualquer tela e que possa ser entendido por qualquer pessoa de forma simples, pois, não basta apenas ter containers que se ajustam a tela ainda precisamos nos focar no texto descritivo.<br>
 
-<p>Hoje não é segredo pra ninguém que boa parte dos usuários tem acesso por (laptops, tablets, netbooks, celulares, desktops com tela pequena, iMacs com telas gigantescas, segundo monitor etc.), ou seja, a internet já não tem possui barreiras em comunicação. Bom vamos ao foco do assunto sabemos que boa parte dos usuários hoje tem desde computadores tem em suas casas desde computadores de mesa até mesmo o celular e pensando nisso que vou falar sobre um assunto polêmico hoje na internet a (web-responsive). Ante começarmos a mostrar as técnicas de medidas adequadas é importante entendermos como surgiu a web responsive.</p>
+Não confunda “Responsive Web Design” com “Adaptive Web Design”, pois, no primeiro caso conseguimos visualizar nosso layout em várias larguras em quanto no segundo só adapta em quatro modelos de telas.
 
-<p>A Web responsive é uma técnica que surgiu com a ideia de solucionar o problema na questão acessibilidade, mas por onde começar a aplicar essa técnica? Devemos pensar em um layout que seja (acessível) a qualquer tela e que possa ser entendido por qualquer pessoa de forma simples, pois, não basta apenas ter containers que se ajustam a tela ainda precisamos nos focar no texto descritivo</p>
-
-<p>Não confunda “Responsive Web Design” com “Adaptive Web Design”, pois, no primeiro caso conseguimos visualizar nosso layout em várias larguras em quanto no segundo só adapta em quatro modelos de telas.</p>
-
-<p>Mobile First e Desk Last 
+Mobile First e Desk Last 
 O Mobile first 
-Nada mais que uma maneira de desenvolver primeiro lugar versão para dispositivos móveis e depois para telas de Desktops e Notebooks. </p>
+Nada mais que uma maneira de desenvolver primeiro lugar versão para dispositivos móveis e depois para telas de Desktops e Notebooks. 
 
-<p>Desk last 
-Em último caso Desktop que se compararmos ao Mobile First sua maneira de trabalho com os objetos é mais fácil </p>
+Desk last 
+Em último caso Desktop que se compararmos ao Mobile First sua maneira de trabalho com os objetos é mais fácil 
+ 
 
-<p>Média Querye</p>
 
-<p>As Médias Queryes são usadas para definirem condições nas quais o css será usado, ou seja, se o dispositivo aceitar tais condições ele então exibirá x resultado algo do tipo isso:</p>
 
-<p><a href="https://github.com/media" class="user-mention">@media</a>(min-width: 768px){
-    header{
-        background-color: red;
-    }
-}</p>
+Média Querye
 
-<p>Perceba que a partir de telas 768px teremos um background vermelho em nosso elemento.
-Medidas responsivas</p>
-
-<p>O px é fácil de trabalhar em telas de 768px, mas para telas menores e até mesmo acima de 768px ele se torna chato de controlar objetos imagina só ter que fazer isto:
- <a href="https://github.com/media" class="user-mention">@media</a>(min-width: 300px){
-    header h1{
-        font-size: 3px;
-    }
+As Médias Queryes são usadas para definirem condições nas quais o css será usado, ou seja, se o dispositivo aceitar tais condições ele então exibirá x resultado algo do tipo isso:
+</p>                            
+<pre>
+@media(min-width: 768px){
+	header{
+		background-color: red;
+	}
 }
-<a href="https://github.com/media" class="user-mention">@media</a>(min-width: 420px){
-    header h1{
-        font-size: 3px;
-    }
-}
-<a href="https://github.com/media" class="user-mention">@media</a>(max-width: 768px){
-    header h1{
-        font-size: 10px;
-    }
-}
-<a href="https://github.com/media" class="user-mention">@media</a>(max-width: 1200px){
-    header h1{
-        font-size: 10px;
-    }
-}</p>
+</pre>
+<p>
+Perceba que a partir de telas 768px teremos um background vermelho em nosso elemento.
+Medidas responsivas
 
-<p>Quando poderia apenas usar medidas responsivas que diminuiriam e muito seu código, mas quais medidas usar? Você adotará o uso de em e rem espaçamentos e tamanhos de fontes algo desse tipo:</p>
-
-<p>header .container{
-    padding: 3rem 0;
+O px é fácil de trabalhar em telas de 768px, mas para telas menores e até mesmo acima de 768px ele se torna chato de controlar objetos imagina só ter que fazer isto:
+ </p>
+<pre>
+     @media(min-width: 300px){
+	header h1{
+		font-size: 3px;
+	}
 }
-<a href="https://github.com/media" class="user-mention">@media</a>(min-width: 768px){
+@media(min-width: 420px){
+	header h1{
+		font-size: 3px;
+	}
+}
+@media(max-width: 768px){
+	header h1{
+		font-size: 10px;
+	}
+}
+@media(max-width: 1200px){
+	header h1{
+		font-size: 10px;
+	}
+}
+</pre>
+<p>                        
+Quando poderia apenas usar medidas responsivas que diminuiriam e muito seu código, mas quais medidas usar? Você adotará o uso de em e rem espaçamentos e tamanhos de fontes algo desse tipo:
+                        </p>    
+<pre>
     header .container{
-        padding: 10rem 0;
-    }
-}</p>
-
-<p>header  h1{
-    font-size: 3rem;
+	padding: 3rem 0;
 }
-<a href="https://github.com/media" class="user-mention">@media</a>(min-width: 768px){
-    header h1{
-        font-size: 10rem;
-    }
-}</p>
+@media(min-width: 768px){
+	header .container{
+		padding: 10rem 0;
+	}
+}
 
-<p>Olha só que nosso código ficou mais clean se compararmos ao anterior que e as medidas que citamos até ajustam perfeitamente de acordo com o que queremos desde telas menores ou maiores.</p>
+header  h1{
+	font-size: 3rem;
+}
+@media(min-width: 768px){
+	header h1{
+		font-size: 10rem;
+	}
+}
 
-<p>Para largura e altura temos três opções %, vw e vh ambas se adaptam a telas menores de 320px e maiores de 768px veja alguns exemplos </p>
+</pre>
+<p>
+ Olha só que nosso código ficou mais clean se compararmos ao anterior que e as medidas que citamos até ajustam perfeitamente de acordo com o que queremos desde telas menores ou maiores.
 
-<p>header{width: 100%;}</p>
-
-<p>Neste exemplo podemos ver que nosso objeto se ajusta em 100% da tela independente se for mobile ou Desk, mas também podemos usar medida da viewport sem nenhum problema veja como ficaria a largura </p>
-
-<p>header{width: 100vw;} </p>
-
-<p>No caso na altura os valores ficam se tornam fixos por tanto use em casos onde você irá ter uma altura definida para seu container veja como ficaria um exemplo:
-.container{
+ Para largura e altura temos três opções %, vw e vh ambas se adaptam a telas menores de 320px e maiores de 768px veja o exemplo 
+</p>    
+<pre>header{width: 100%;}</pre>
+<p>
+Neste exemplo podemos ver que nosso objeto se ajusta em 100% da tela independente se for mobile ou Desk, mas também podemos usar medida da viewport sem nenhum problema veja como ficaria a largura:
+</p>    
+<pre>
+    header{width: 100vw;} 
+</pre>
+<p>
+    No caso na altura os valores ficam se tornam fixos por tanto use em casos onde você irá ter uma altura definida para seu container veja como ficaria um exemplo:
+</p>
+<pre>
+    .container{
            background-color: #333;
-    height: 40vh;
-}</p>
+	   height: 40vh;
+}
+</pre>                       
+<p>
+Caso queira que seu container ajuste o tamanho da altura automaticamente de acordo com conteúdo que irá ser inserido coloque da seguinte forma:
 
-<p>Caso queira que seu container ajuste o tamanho da altura automaticamente de acordo com conteúdo que irá ser inserido coloque da seguinte forma:</p>
+.container{height: auto;} 
 
-<p>.container{height: auto;} </p>
-
-<p>Dessa maneira ele se ajustara sem nenhum problema de acordo com o conteúdo inserido. </p>
-
-      <footer class="site-footer">
-        <span class="site-footer-owner">Desenvolvimento: <a href="https://github.com/AndrezinRodrigue">Andrerodrigues</a></span>
-
-        <span class="site-footer-credits">&copy; TODOS DIREITOS RESERVADOS</span>
-      </footer>
-
-    </section>
-
-  
-  </body>
+Dessa maneira ele se ajustara sem nenhum problema de acordo com o conteúdo inserido. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section><!--/conteudo-->
+        <footer>
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-lg-4">
+                        <h5>ACESSE TAMBÉM</h5><br>
+                        <ul>
+                            <li class="git"><a href="https://andrezinrodrigue.github.io/"><i class="fa fa-github fa-2x"></i> GITHUB</a></li>
+                            <li class="facebook"><a href="https://www.facebook.com/andre.laurentino"><i class="fa fa-facebook fa-2x"></i> FACEBOOK</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <h5>&copy; TODOS DIREITOS RESERVADOS</h5>
+                    </div>
+                    <div class="col-lg-4">
+                        <h5>DESENVOLVIMENTO: ANDRÉ RODRIGUES</h5>
+                    </div>    
+                </div>
+            </div>
+        </footer><!--/footer-->
+    <!--/scripts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>    
+    </body>
 </html>
