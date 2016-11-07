@@ -19,30 +19,97 @@
     </section>
 
     <section class="main-content">
-      <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+      <p>Web Responsive e CSS Elegant </p>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here <a href="https://guides.github.com/features/mastering-markdown/">using GitHub Flavored Markdown</a>, select a template crafted by a designer, and publish. After your page is generated, you can check out the new <code>gh-pages</code> branch locally. If you’re using GitHub Desktop, simply sync your repository and you’ll see the new branch.</p>
+<p>Hoje não é segredo pra ninguém que boa parte dos usuários tem acesso por (laptops, tablets, netbooks, celulares, desktops com tela pequena, iMacs com telas gigantescas, segundo monitor etc.), ou seja, a internet já não tem possui barreiras em comunicação. Bom vamos ao foco do assunto sabemos que boa parte dos usuários hoje tem desde computadores tem em suas casas desde computadores de mesa até mesmo o celular e pensando nisso que vou falar sobre um assunto polêmico hoje na internet a (web-responsive). Ante começarmos a mostrar as técnicas de medidas adequadas é importante entendermos como surgiu a web responsive.</p>
 
-<h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Designer Templates</h3>
+<p>A Web responsive é uma técnica que surgiu com a ideia de solucionar o problema na questão acessibilidade, mas por onde começar a aplicar essa técnica? Devemos pensar em um layout que seja (acessível) a qualquer tela e que possa ser entendido por qualquer pessoa de forma simples, pois, não basta apenas ter containers que se ajustam a tela ainda precisamos nos focar no texto descritivo</p>
 
-<p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
+<p>Não confunda “Responsive Web Design” com “Adaptive Web Design”, pois, no primeiro caso conseguimos visualizar nosso layout em várias larguras em quanto no segundo só adapta em quatro modelos de telas.</p>
 
-<h3>
-<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating pages manually</h3>
+<p>Mobile First e Desk Last 
+O Mobile first 
+Nada mais que uma maneira de desenvolver primeiro lugar versão para dispositivos móveis e depois para telas de Desktops e Notebooks. </p>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>Desk last 
+Em último caso Desktop que se compararmos ao Mobile First sua maneira de trabalho com os objetos é mais fácil </p>
 
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<p>Média Querye</p>
 
-<p>You can @mention a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p>As Médias Queryes são usadas para definirem condições nas quais o css será usado, ou seja, se o dispositivo aceitar tais condições ele então exibirá x resultado algo do tipo isso:</p>
 
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
+<p><a href="https://github.com/media" class="user-mention">@media</a>(min-width: 768px){
+    header{
+        background-color: red;
+    }
+}</p>
 
-<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
+<p>Perceba que a partir de telas 768px teremos um background vermelho em nosso elemento.
+Medidas responsivas</p>
+
+<p>O px é fácil de trabalhar em telas de 768px, mas para telas menores e até mesmo acima de 768px ele se torna chato de controlar objetos imagina só ter que fazer isto:
+ <a href="https://github.com/media" class="user-mention">@media</a>(min-width: 300px){
+    header h1{
+        font-size: 3px;
+    }
+}
+<a href="https://github.com/media" class="user-mention">@media</a>(min-width: 420px){
+    header h1{
+        font-size: 3px;
+    }
+}
+<a href="https://github.com/media" class="user-mention">@media</a>(max-width: 768px){
+    header h1{
+        font-size: 10px;
+    }
+}
+<a href="https://github.com/media" class="user-mention">@media</a>(max-width: 1200px){
+    header h1{
+        font-size: 10px;
+    }
+}</p>
+
+<p>Quando poderia apenas usar medidas responsivas que diminuiriam e muito seu código, mas quais medidas usar? Você adotará o uso de em e rem espaçamentos e tamanhos de fontes algo desse tipo:</p>
+
+<p>header .container{
+    padding: 3rem 0;
+}
+<a href="https://github.com/media" class="user-mention">@media</a>(min-width: 768px){
+    header .container{
+        padding: 10rem 0;
+    }
+}</p>
+
+<p>header  h1{
+    font-size: 3rem;
+}
+<a href="https://github.com/media" class="user-mention">@media</a>(min-width: 768px){
+    header h1{
+        font-size: 10rem;
+    }
+}</p>
+
+<p>Olha só que nosso código ficou mais clean se compararmos ao anterior que e as medidas que citamos até ajustam perfeitamente de acordo com o que queremos desde telas menores ou maiores.</p>
+
+<p>Para largura e altura temos três opções %, vw e vh ambas se adaptam a telas menores de 320px e maiores de 768px veja alguns exemplos </p>
+
+<p>header{width: 100%;}</p>
+
+<p>Neste exemplo podemos ver que nosso objeto se ajusta em 100% da tela independente se for mobile ou Desk, mas também podemos usar medida da viewport sem nenhum problema veja como ficaria a largura </p>
+
+<p>header{width: 100vw;} </p>
+
+<p>No caso na altura os valores ficam se tornam fixos por tanto use em casos onde você irá ter uma altura definida para seu container veja como ficaria um exemplo:
+.container{
+           background-color: #333;
+    height: 40vh;
+}</p>
+
+<p>Caso queira que seu container ajuste o tamanho da altura automaticamente de acordo com conteúdo que irá ser inserido coloque da seguinte forma:</p>
+
+<p>.container{height: auto;} </p>
+
+<p>Dessa maneira ele se ajustara sem nenhum problema de acordo com o conteúdo inserido. </p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/AndrezinRodrigue/AndreRodrigues">Andrerodrigues</a> is maintained by <a href="https://github.com/AndrezinRodrigue">AndrezinRodrigue</a>.</span>
